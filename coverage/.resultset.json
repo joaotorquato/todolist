@@ -1,0 +1,32 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/joaotorquato/workspace/todolist/app/models/user.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/home/joaotorquato/workspace/todolist/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/joaotorquato/workspace/todolist/app/controllers/home_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/joaotorquato/workspace/todolist/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1459648113
+  }
+}
