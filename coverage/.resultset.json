@@ -11,6 +11,10 @@
       ],
       "/home/joaotorquato/workspace/todolist/app/helpers/application_helper.rb": [
         1,
+        1,
+        3,
+        3,
+        null,
         null
       ],
       "/home/joaotorquato/workspace/todolist/app/controllers/application_controller.rb": [
@@ -62,6 +66,6 @@
         null
       ]
     },
-    "timestamp": 1459706819
+    "timestamp": 1459717693
   }
 }

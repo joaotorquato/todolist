@@ -1,11 +1,33 @@
-<h3>
-  Do It! The To-Do List for procrastinators
-</h3>
+<section class="section-title">
+  <div class="row">
+    <div class="col-md-offset-3 col-md-6 col-sm-12 text-center">
+      <div class="page-header">
+        <h1>
+          Do It! A To-Do List Manager
+        </h1>
+      </div>
+      <p>
+        A powerful task manager for personal or collaborative productivity that lets you manage your to do list from your inbox, browser, desktop, or mobile device. For people who want to accomplish great things in less time, with less effort.
+      </p>
+    </div>
+  </div>
+</section>
 
-<% if user_signed_in? %>
-<div class="btn-group-vertical" role="group">
-  <%= link_to 'Create a new list', new_list_path, class: 'btn btn-default' %>
-</div>
-<% else %>
-You must <%= link_to "sign up", new_user_registration_path  %> or <%= link_to "sign in", new_user_session_path  %> to manage your lists!
-<% end %>
+<section class="section-menu">
+  <div class="row">
+    <div class="col-md-offset-3 col-md-6 col-sm-12 text-center">
+      <% if user_signed_in? %>
+        <h3>Let's start!</h3>
+        <p>
+          Click on Menu in the navbar on top and start doing!
+        </p>
+      <% else %>
+        <h3>You must
+          <%= link_to "sign up", new_user_registration_path  %>
+          or
+          <%= link_to "sign in", new_user_session_path  %>
+          to manage your lists!</h3>
+      <% end %>
+    </div>
+  </div>
+</section>
