@@ -2,6 +2,10 @@
   Do It! The To-Do List for procrastinators
 </h3>
 
-<% unless user_signed_in? %>
+<% if user_signed_in? %>
+<div class="btn-group-vertical" role="group">
+  <%= link_to 'Create a new list', new_list_path, class: 'btn btn-default' %>
+</div>
+<% else %>
 You must <%= link_to "sign up", new_user_registration_path  %> or <%= link_to "sign in", new_user_session_path  %> to manage your lists!
 <% end %>

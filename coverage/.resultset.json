@@ -13,20 +13,55 @@
         1,
         null
       ],
-      "/home/joaotorquato/workspace/todolist/app/controllers/home_controller.rb": [
-        1,
-        1,
-        null,
-        null
-      ],
       "/home/joaotorquato/workspace/todolist/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
+      ],
+      "/home/joaotorquato/workspace/todolist/app/controllers/home_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/joaotorquato/workspace/todolist/app/controllers/lists_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/joaotorquato/workspace/todolist/app/models/list.rb": [
+        1,
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1459692440
+    "timestamp": 1459706819
   }
 }

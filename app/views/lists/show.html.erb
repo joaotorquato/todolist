@@ -1,0 +1,12 @@
+<div class="page-header">
+  <h3>To-Do List: <%= @list.name %></h3>
+</div>
+
+<dl>
+  <dt>Type</dt>
+  <% if @list.private?  %>
+    <dd>Private</dd>
+  <% else  %>
+    <dd>Public</dd>
+  <% end  %>
+</dl>

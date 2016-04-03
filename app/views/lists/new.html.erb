@@ -1,0 +1,5 @@
+<%= simple_form_for @list do |f| %>
+  <%= f.input :name %>
+  <%= f.input :private, as: :boolean %>
+  <%= f.button :submit, 'Create' %>
+<% end %>
