@@ -1,0 +1,18 @@
+class TasksController < ApplicationController
+  def create
+    @list = List.find(params[:list_id])
+    @task = Task.new(task_params)
+    @task.list_id = @list.id
+    if @task.save
+      redirect_to @task.list
+    else
+      render template: 'lists/show'
+    end
+  end
+
+  private
+
+  def task_params
+    params.require(:task).permit(:name, :list_id)
+  end
+end
