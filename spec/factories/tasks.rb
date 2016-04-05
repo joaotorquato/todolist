@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :task do
-    name 'Test task'
+    sequence(:name) { |n| "Task ##{n}" }
     list nil
     done false
   end
