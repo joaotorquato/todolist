@@ -12,8 +12,8 @@
       "/home/joaotorquato/workspace/todolist/app/helpers/application_helper.rb": [
         1,
         1,
-        4,
-        4,
+        6,
+        6,
         null,
         null
       ],
@@ -76,24 +76,20 @@
       "/home/joaotorquato/workspace/todolist/app/controllers/tasks_controller.rb": [
         1,
         1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        0,
-        null,
+        2,
+        2,
+        2,
+        2,
         null,
         null,
         1,
         null,
         1,
-        1,
+        2,
         null,
         null
       ]
     },
-    "timestamp": 1459737897
+    "timestamp": 1459823608
   }
 }

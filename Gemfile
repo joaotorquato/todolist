@@ -16,6 +16,8 @@ gem 'pg'
 
 group :development, :test do
   gem 'capybara'
+  gem 'poltergeist'
+  gem 'database_cleaner'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'pry-rails'

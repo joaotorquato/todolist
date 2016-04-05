@@ -3,11 +3,7 @@ class TasksController < ApplicationController
     @list = List.find(params[:list_id])
     @task = Task.new(task_params)
     @task.list_id = @list.id
-    if @task.save
-      redirect_to @task.list
-    else
-      render template: 'lists/show'
-    end
+    flash[:error] = 'An error has occurred!' unless @task.save
   end
 
   private
