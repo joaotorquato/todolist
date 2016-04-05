@@ -2,17 +2,22 @@ require 'rails_helper'
 
 feature 'User creates a new list' do
   scenario 'successfuly' do
-    sign_in
+    user = create(:user)
+    sign_in(user)
+    list = build(:list, user: user, private: false)
 
     click_on 'Create a new list'
 
-    fill_in 'list[name]', with: 'List #1'
+    fill_in 'list[name]', with: list.name
+    choose 'No'
 
     click_on 'Create'
 
-    expect(page).to have_content 'To-Do List'
-    expect(page).to have_content 'List #1'
-    expect(page).to have_content 'Public'
-    expect(page).to have_content 'joao.otl@gmail.com'
+    within '.list-details' do
+      expect(page).to have_content 'To-Do List'
+      expect(page).to have_content list.name
+      expect(page).to have_content 'Public'
+      expect(page).to have_content list.user.email
+    end
   end
 end

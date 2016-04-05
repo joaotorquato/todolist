@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :list do
-    name 'MyString'
+    name 'Test List'
     private false
     user nil
   end
