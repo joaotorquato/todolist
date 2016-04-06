@@ -17,4 +17,18 @@ feature 'User sees all his lists' do
       expect(page).to have_link list.name
     end
   end
+
+  scenario 'and not others\' lists' do
+    user = create(:user)
+    user2 = create(:user)
+    sign_in(user)
+
+    other_lists = create_list(:list, 5, user: user2)
+
+    visit lists_path
+
+    other_lists.each do |list|
+      expect(page).not_to have_link list.name
+    end
+  end
 end

@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/limabetalabs/workspace/todolist/app/models/user.rb": [
+      "/home/joaotorquato/workspace/todolist/app/models/user.rb": [
         1,
         null,
         null,
@@ -9,40 +9,40 @@
         null,
         null
       ],
-      "/home/limabetalabs/workspace/todolist/app/helpers/application_helper.rb": [
+      "/home/joaotorquato/workspace/todolist/app/helpers/application_helper.rb": [
         1,
         1,
-        8,
-        8,
+        9,
+        9,
         null,
         null
       ],
-      "/home/limabetalabs/workspace/todolist/app/controllers/application_controller.rb": [
+      "/home/joaotorquato/workspace/todolist/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
-      "/home/limabetalabs/workspace/todolist/app/controllers/home_controller.rb": [
+      "/home/joaotorquato/workspace/todolist/app/controllers/home_controller.rb": [
         1,
         1,
         null,
         null
       ],
-      "/home/limabetalabs/workspace/todolist/app/models/list.rb": [
+      "/home/joaotorquato/workspace/todolist/app/models/list.rb": [
         1,
         1,
         1,
         1,
         null
       ],
-      "/home/limabetalabs/workspace/todolist/app/controllers/lists_controller.rb": [
+      "/home/joaotorquato/workspace/todolist/app/controllers/lists_controller.rb": [
         1,
         1,
         null,
         1,
-        2,
+        3,
         null,
         null,
         1,
@@ -71,13 +71,13 @@
         null,
         null
       ],
-      "/home/limabetalabs/workspace/todolist/app/models/task.rb": [
+      "/home/joaotorquato/workspace/todolist/app/models/task.rb": [
         1,
         1,
         1,
         null
       ],
-      "/home/limabetalabs/workspace/todolist/app/controllers/tasks_controller.rb": [
+      "/home/joaotorquato/workspace/todolist/app/controllers/tasks_controller.rb": [
         1,
         1,
         2,
@@ -94,6 +94,6 @@
         null
       ]
     },
-    "timestamp": 1459896559
+    "timestamp": 1459903399
   }
 }
