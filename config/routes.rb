@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   root 'home#index'
   resources :lists, only: [:new, :create, :show, :index] do
     resources :tasks, only: [:create]
+    get 'public', on: :collection
   end
 end
