@@ -24,6 +24,10 @@ class ListsController < ApplicationController
     @task = Task.new
   end
 
+  def public
+    @lists = List.where(private: false).where.not(user_id: current_user.id)
+  end
+
   private
 
   def list_params
