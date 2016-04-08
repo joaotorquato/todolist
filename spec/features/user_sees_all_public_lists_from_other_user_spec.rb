@@ -11,6 +11,8 @@ feature 'User sees all public lists from other users' do
 
     visit public_lists_path
 
+    expect(page).to have_selector 'h1', text: 'Public Lists'
+
     other_user_lists.each do |list|
       expect(page).to have_link list.name
     end
