@@ -13,6 +13,20 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
-//= require turbolinks
 //= require_tree .
 //= require growlyflash
+
+//This script is to collapse certain panels in mobile version
+$(document).ready(function(){
+  collapse_panel();
+});
+$(window).resize(function() {
+  collapse_panel();
+});
+function collapse_panel(){
+  if ($(document).width() < 768) {
+    $('.panel-collapse-mobile').removeClass('in');
+  }else{
+    $('.panel-collapse-mobile').addClass('in');
+  }
+}

@@ -3,22 +3,34 @@
     <div class="col-md-offset-3 col-md-6 col-sm-12">
       <div class="panel panel-default">
         <div class="panel-heading">
-          List details
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse1">
+              <%= @list.name %> - List details
+            </a>
+          </h4>
         </div>
-        <div class="panel-body">
-          <h1><%= @list.name %></h1>
-          <dl>
-            <dt>Type</dt>
-            <% if @list.private? %>
-            <dd>Private</dd>
-          <% else  %>
-            <dd>Public</dd>
-            <% end  %>
-            <dt>Created by</dt>
-            <dd>
-              <%= @list.user.email %>
-            </dd>
-          </dl>
+        <div id="collapse1" class="panel-collapse-mobile panel-collapse collapse in" aria-expanded="true">
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-sm-4">
+                <h3><%= @list.name %></h3>
+              </div>
+              <div class="col-sm-8">
+                <dl>
+                  <dt>Type</dt>
+                  <% if @list.private? %>
+                  <dd>Private</dd>
+                <% else  %>
+                  <dd>Public</dd>
+                  <% end  %>
+                  <dt>Created by</dt>
+                  <dd>
+                    <%= @list.user.email %>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
