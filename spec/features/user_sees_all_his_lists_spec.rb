@@ -10,6 +10,8 @@ feature 'User sees all his lists' do
 
     visit lists_path
 
+    expect(page).to have_selector 'h1', text: 'Your Lists'
+
     public_lists.each do |list|
       expect(page).to have_link list.name
     end

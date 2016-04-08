@@ -14,6 +14,8 @@ feature 'User sees all his favorite lists' do
 
     visit favorite_lists_path
 
+    expect(page).to have_selector 'h1', text: 'Your Favorite Lists'
+
     expect(page).to have_link favorite_list_1.list.name
     expect(page).to have_link favorite_list_2.list.name
   end
