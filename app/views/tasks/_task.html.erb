@@ -1,9 +1,11 @@
 <tr>
   <% if task.done? %>
   <td class="table-text" style="text-decoration: line-through"> <%= task.name %> </td>
-  <td> <%= check_box_tag 'done', 'done', true, disabled: true %> </td>
+  <!-- <td> <%= check_box_tag 'done', 'done', true, disabled: true %> </td> -->
+  <td> <%= button_to 'Mark as Undone', root_path, method: :get, class: 'btn btn-danger btn-xs' %> </td>
   <% else %>
   <td class="table-text"> <%= task.name %> </td>
-  <td> <%= check_box_tag 'done', 'done', false, title: 'Click here to mark as Done' %> </td>
+  <!-- <td> <%= check_box_tag 'done', 'done', false, title: 'Click here to mark as Done' %> </td> -->
+  <td> <%= button_to 'Mark as Done', root_path, method: :get, class: 'btn btn-success btn-xs' %> </td>
   <% end %>
 </tr>
