@@ -10,7 +10,7 @@ feature 'User marks others\' public list as favorite' do
     visit public_lists_path
 
     within "#list-#{other_user_list.id}" do
-      favorite_link = favorite_list_path(other_user_list)
+      favorite_link = mark_favorite_list_path(other_user_list)
       expect(page).to have_link 'Mark as favorite', href: favorite_link
       click_on 'Mark as favorite'
     end

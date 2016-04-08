@@ -28,7 +28,7 @@ class ListsController < ApplicationController
     @lists = List.where(private: false).where.not(user_id: current_user.id)
   end
 
-  def favorite
+  def mark_favorite
     @list = List.find(params[:id])
     if current_user.mark_favorite(@list)
       flash[:success] = 'List was mark as favorite successfuly.'
@@ -36,6 +36,10 @@ class ListsController < ApplicationController
       flash[:error] = 'An error ocurred!'
     end
     redirect_to :public_lists
+  end
+
+  def favorite
+    @lists = current_user.favorite_lists
   end
 
   private
