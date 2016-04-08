@@ -5,9 +5,9 @@
   <td>
     <% if current_user.favorite_list?(list)  %>
       <!-- TODO: Create unmark feature -->
-      <%= link_to 'Unmark as favorite', '/' %>
+      <%= button_to 'Unmark as favorite', root_path, method: :get, class: 'btn btn-danger btn-xs' %>
     <% else  %>
-      <%= link_to 'Mark as favorite', mark_favorite_list_path(list) %>
+      <%= button_to 'Mark as favorite', mark_favorite_list_path(list), method: :get, class: 'btn btn-success btn-xs' %>
     <% end  %>
   </td>
 </tr>
