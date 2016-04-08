@@ -25,6 +25,8 @@
               <li><%= link_to 'See all your lists', lists_path %></li>
               <li role="separator" class="divider"></li>
               <li><%= link_to 'See all public lists', public_lists_path %></li>
+              <li role="separator" class="divider"></li>
+              <li><%= link_to 'See all favorite lists', favorite_lists_path %></li>
             </ul>
           </li>
           <li><%= link_to "Logged as #{current_user.email}", root_path, class: 'navbar-btn', readonly: true %></li>
