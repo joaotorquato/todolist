@@ -1,9 +1,9 @@
 <tr>
   <% if task.done? %>
+  <td class="table-text" style="text-decoration: line-through"> <%= task.name %> </td>
   <td> <%= check_box_tag 'done', 'done', true, disabled: true %> </td>
-  <td style="text-decoration: line-through"> <%= task.name %> </td>
   <% else %>
-  <td> <%= check_box_tag 'done', 'done' %> </td>
-  <td> <%= task.name %> </td>
+  <td class="table-text"> <%= task.name %> </td>
+  <td> <%= check_box_tag 'done', 'done', false, title: 'Click here to mark as Done' %> </td>
   <% end %>
 </tr>

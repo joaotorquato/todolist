@@ -30,19 +30,24 @@ class ListsController < ApplicationController
   end
 
   def index
-    @lists = List.where(user_id: current_user.id)
     @title = 'Your Lists'
+    @lists = current_user.lists
+    @lists_empty_message = "You don\'t have lists yet" if @lists.empty?
   end
 
   def public
-    @lists = List.where(private: false).where.not(user_id: current_user.id)
     @title = 'Public Lists'
+    @lists = List.where(private: false).where.not(user_id: current_user.id)
+    if @lists.empty?
+      @lists_empty_message = 'Others users don\'t have public lists yet'
+    end
     render :index
   end
 
   def favorite
-    @lists = current_user.favorite_lists
     @title = 'Your Favorite Lists'
+    @lists = current_user.favorite_lists
+    @lists_empty_message = 'You don\'t have favorite lists yet' if @lists.empty?
     render :index
   end
 
