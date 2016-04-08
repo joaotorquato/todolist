@@ -5,7 +5,7 @@ class TasksController < ApplicationController
     @task.list_id = @list.id
     unless @task.save
       @task.errors.full_messages.each do |msg|
-        flash[:error] = msg
+        flash[:error] = 'Task ' + msg
       end
     end
   end

@@ -26,6 +26,6 @@ feature 'User creates a new task', js: true do
     fill_in 'task[name]', with: ''
     click_on 'Create Task'
 
-    expect(page).to have_content 'An error has occurred!'
+    expect(page).to have_content 'Task Name can\'t be blank'
   end
 end
