@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-md-offset-3 col-md-6 col-sm-12">
+    <div class="page-header text-center">
+      <h1>Log in</h1>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Log in
+      </div>
+      <div class="panel-body">
+        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="form-inputs">
+          <%= f.input :email, required: false, autofocus: true, input_html: { class: 'form-control'}, wrapper_html: { class: 'form-group' } %>
+          <%= f.input :password, required: false, input_html: { class: 'form-control'}, wrapper_html: { class: 'form-group' } %>
+          <%= f.input :remember_me, wrapper_html: { class: 'form-group checkbox' }, as: :boolean if devise_mapping.rememberable? %>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, "Log in", class: 'btn btn-primary' %>
+        </div>
+        <% end %>
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
+</div>

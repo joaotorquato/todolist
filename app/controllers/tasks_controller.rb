@@ -3,7 +3,11 @@ class TasksController < ApplicationController
     @list = List.find(params[:list_id])
     @task = Task.new(task_params)
     @task.list_id = @list.id
-    flash[:error] = 'An error has occurred!' unless @task.save
+    unless @task.save
+      @task.errors.full_messages.each do |msg|
+        flash[:error] = 'Task ' + msg
+      end
+    end
   end
 
   private

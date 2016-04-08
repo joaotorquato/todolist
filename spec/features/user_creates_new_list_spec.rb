@@ -14,7 +14,6 @@ feature 'User creates a new list' do
     click_on 'Create'
 
     within '.list-details' do
-      expect(page).to have_content 'To-Do List'
       expect(page).to have_content list.name
       expect(page).to have_content 'Public'
       expect(page).to have_content list.user.email

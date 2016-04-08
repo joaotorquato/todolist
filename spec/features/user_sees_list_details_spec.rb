@@ -12,7 +12,6 @@ feature 'User sees list details' do
     click_on list.name
 
     within '.list-details' do
-      expect(page).to have_content 'To-Do List'
       expect(page).to have_content list.name
       expect(page).to have_content 'Public'
       expect(page).to have_content list.user.email

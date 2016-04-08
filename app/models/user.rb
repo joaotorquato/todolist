@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :favorite_lists
+  has_many :lists
 
   def mark_favorite(list)
     @favorite_list = FavoriteList.new(user: self, list: list)
