@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'User sees all public lists from other users' do
+feature 'User sees all the public lists from others' do
   scenario 'successfuly' do
     user = create(:user)
     other_user = create(:user)
