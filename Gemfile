@@ -13,6 +13,7 @@ gem 'rails_12factor', group: :production
 gem 'simple_form'
 gem 'devise'
 gem 'pg'
+gem 'growlyflash'
 
 group :development, :test do
   gem 'capybara'

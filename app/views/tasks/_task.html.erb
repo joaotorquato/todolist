@@ -1,4 +1,4 @@
-<tr>
+<tr id="task-<%= task.id %>">
   <% if task.done? %>
   <td class="table-text" style="text-decoration: line-through"> <%= task.name %> </td>
   <!-- <td> <%= check_box_tag 'done', 'done', true, disabled: true %> </td> -->

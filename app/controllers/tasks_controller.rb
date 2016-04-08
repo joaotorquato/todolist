@@ -3,7 +3,9 @@ class TasksController < ApplicationController
     @list = List.find(params[:list_id])
     @task = Task.new(task_params)
     @task.list_id = @list.id
-    unless @task.save
+    if @task.save
+      flash[:success] = 'Task was created successfuly.'
+    else
       @task.errors.full_messages.each do |msg|
         flash[:error] = 'Task ' + msg
       end

@@ -1,6 +1,4 @@
 <% if @task.errors.empty? %>
-$("<%= escape_javascript(render @task) %>").prependTo("#tasks");
-$("#task_name").val('');
-<% else %>
-$("<%= escape_javascript(render 'layouts/messages') %>").prependTo("body > .container-fluid");
+  $("<%= escape_javascript(render @task) %>").prependTo("#tasks");
+  $("#task_name").val('');
 <% end %>
