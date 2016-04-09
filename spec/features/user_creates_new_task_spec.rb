@@ -11,6 +11,8 @@ feature 'User creates a new task', js: true do
     fill_in 'task[name]', with: 'Task #1'
     click_on 'Create Task'
 
+    expect(page)
+      .to have_css '.growlyflash-right', text: 'Task was created successfuly.'
     within '.task-list' do
       expect(page).to have_content 'Task #1'
     end

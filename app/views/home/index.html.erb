@@ -17,10 +17,10 @@
   <div class="row">
     <div class="col-md-offset-3 col-md-6 col-sm-12 text-center">
       <% if user_signed_in? %>
-        <h3>Let's start!</h3>
-        <p>
-          Click on Menu in the navbar on top and start doing!
-        </p>
+        <h2>You're logged in, let's start!</h2>
+        <h3>
+          Go to your <%= link_to 'Lists', lists_path  %> and start doing!
+        </h3>
       <% else %>
         <h3>You must
           <%= link_to "sign up", new_user_registration_path  %>
