@@ -26,7 +26,7 @@ class ListsController < ApplicationController
     else
       flash[:error] = 'An error ocurred!'
     end
-    redirect_to :public_lists
+    redirect_to :favorite_lists
   end
 
   def index

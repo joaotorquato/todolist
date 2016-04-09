@@ -13,7 +13,7 @@ feature 'User marks others\' public list as favorite' do
       click_on 'Mark as favorite'
     end
 
-    expect(page.current_path).to eq public_lists_path
+    expect(page.current_path).to eq favorite_lists_path
     expect(page).to have_content 'List was mark as favorite successfuly.'
     within "#list-#{other_user_list.id}" do
       expect(page).to have_button 'Unmark as favorite'
